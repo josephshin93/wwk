@@ -1,0 +1,54 @@
+<style>
+	.tabs {
+		width: 100%;
+		padding-left: 20px;
+/*		background-color: #d3d3d3;
+*/	}
+	.tab {
+		display: inline-block;
+		width: 150px;
+		height: 30px;
+		background-color: black;
+		color: white;
+		border-radius: 5px 5px 0 0;
+		cursor: pointer;
+	}
+	.tab p {
+		padding: 5px 0 0 10px;
+	}
+	.tab-content {
+		width: 100%;
+		background-color: #E5E7E9;
+	}
+</style>
+
+<div class="tabs">
+	<div class="tab" ng-click="$ctrl.chooseTab('dashboard')"><p>Dashboard</p></div>
+	<div class="tab" ng-click="$ctrl.chooseTab('pageEdit')"><p>Edit Pages</p></div>
+</div>
+<div class="tab-content">
+	<div ng-show="$ctrl.tabs.dashboard">
+		<h2 style="margin-top:0;padding-top:20px">Dashboard Template</h2>
+		<h3>Welcome {{$ctrl.manage.user.name}}</h3>
+		<p>get ready to edit pages! because we don't really have anything else right now...</p>
+	</div>
+	<!-- <dashboard ng-show="$ctrl.tabs.dashboard"></dashboard> -->
+	<page-edit ng-show="$ctrl.tabs.pageEdit"></page-edit>
+	<button class="btn" ng-click="$ctrl.logout()">LOGOUT</button>
+</div>
+
+
+
+<!--
+	TODO:	Let's design how we want the cms to look
+			We have pages and sections within those pages
+			What structure/hierarchy would display everything in a 
+			sleek and intutitve way?
+-->
+<!-- <button ng-click="$ctrl.edit('pages')" class="btn btn-primary">EDIT PAGES</button>
+<div ng-include="$ctrl.editTemplate"></div>
+ -->
+<!-- <dashboard></dashboard>
+<page-edit></page-edit> -->
+
+ <!-- <button ng-click="$ctrl.logout()" class="btn">LOGOUT</button> -->

@@ -1,0 +1,51 @@
+<h2 style="margin-top:0;padding-top:20px">Page Edit Template</h2>
+<table class="table" style="background-color: #d3d3d3;">
+	<thead>
+		<tr class="row">
+			<td class="col-md-3">Pages</td>
+			<td class="col-md-9">Edit</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="row">
+			<td class="col-md-3">
+				<div ng-repeat="page in $ctrl.pages">
+					<h3 style="cursor:pointer;" ng-click="$ctrl.showSections(page)">{{page.name}}</h3>
+					<div ng-repeat="section in page.sections" ng-show="page.showSections">
+						<h5 style="cursor:pointer;padding-left:10px;color:grey;" ng-click="$ctrl.edit(section)">{{section.name}}</h5>
+					</div>
+				</div>
+			</td>
+			<td class="col-md-9">
+				<form>
+					<div class="form-group">
+	    				<label>Title</label>
+	    				<input type="text" class="form-control" ng-model="$ctrl.section.title">
+	 				</div>
+	 				<div class="form-group">
+	    				<label>Description</label>
+	    				<textarea class="form-control" rows="10" ng-model="$ctrl.section.description"></textarea>
+	 				</div>
+	 				<div class="form-group">
+	 					<label>Notes</label>
+	 					<div ng-repeat="note in $ctrl.section.notes">
+	 						<textarea class="form-control" rows="4" ng-model="note"></textarea>
+	 					</div>
+	 				</div>
+	 				<div class="form-group">
+	 					<label>List</label>
+	 					<div ng-repeat="item in $ctrl.section.list">
+	 						<input type="text" ng-model="item" class="form-control">
+	 					</div>
+	 				</div>
+	 				<div class="form-group">
+	 					<label>Images</label>
+	 					<div>
+	 						
+	 					</div>
+	 				</div>
+				</form>
+			</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+	<head>
+		<meta charset="utf-8">
+		<title>TEST WWK</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<div ng-view></div>
+
+
+		<!-- jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- angular -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js"></script>
+		<!-- root scripts -->
+		<script src="main.module.js"></script>
+		<script src="main.config.js"></script>
+		<!-- core scripts -->
+		<script src="core/authentication/authentication.module.js"></script>
+		<script src="core/authentication/authentication.service.js"></script>
+		<!-- dashboard component scripts -->
+		<script src="dashboard-component/dashboard.module.js"></script>
+		<script src="dashboard-component/dashboard.component.js"></script>
+		<!-- page edit component scripts -->
+		<script src="page-edit-component/page-edit.module.js"></script>
+		<script src="page-edit-component/page-edit.component.js"></script>
+		<!-- cms scripts -->
+		<script src="cms-component/cms.module.js"></script>
+		<script src="cms-component/cms.component.js"></script>
+		<!-- test scripts -->
+		<script src="test-component/test.module.js"></script>
+		<script src="test-component/test.component.js"></script>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+.section {
+	padding: 10px;
+}
+.section:hover {
+	border: 4px solid #0066ff;
+}
+/*.description {
+	height: 500px;
+}*/
